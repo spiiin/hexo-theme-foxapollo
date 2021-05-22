@@ -1,0 +1,30 @@
+{
+  "name": "hexo-theme-foxapollo",
+  "version": "1.0.0",
+  "description": "Hexo theme inspired by pandollo",
+  "main": "index.js",
+  "scripts": {
+    "sass": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spiiin/hexo-theme-foxapollo"
+  },
+  "keywords": [
+    "hexo",
+    "theme",
+    "fox",
+    "apollo"
+  ],
+  "author": "spiiin <sanya.boyko@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spiiin/hexo-theme-foxapollo/issues"
+  },
+  "homepage": "https://github.com/spiiin/hexo-theme-foxapollo#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1"
+  }
+}

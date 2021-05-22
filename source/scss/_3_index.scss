@@ -1,0 +1,205 @@
+.article {
+    border-top: 1px solid $metaData;
+    overflow: auto;
+    padding: 20px 0;
+    &:first-child {
+        border: none;
+    }
+    &.post {
+        padding-bottom: 0;
+    }
+    &__title {
+        color: $pandaBlue;
+        font-size: 26px;
+        margin-bottom: 20px;
+        &__link {
+            color: inherit;
+            border-bottom: 1px solid transparent;
+            &:hover {
+                border-color: $pandaFox;
+            }
+        }
+    }
+    &__tags {
+        display: flex;
+        margin-top: 10px;
+        &__link {
+            color: $pandaGreen;
+            margin-left: 3px;
+            border-bottom: 1px solid transparent;
+            &:hover {
+                color: $pandaGreen;
+                border-color: $pandaFox;
+            }
+        }
+    }
+    &__body {
+        line-height: 20px;
+        margin: 20px 0;
+        > * {
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        //for usual tables (except code highlighting)
+        :not(figure) {
+            table {
+                border-collapse: collapse;
+            }
+            td:not(.code):not(.gutter):not(.blob-num):not(.blob-code) {
+                padding: 1px;
+                border: 1px solid black;
+            }
+            th {
+                padding: 1px;
+                border: 1px solid #01262b;
+                background: #023f47;
+            }
+        }
+
+        a {
+            color: $pandaFox;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            &:hover {
+                color: $pandaFox;
+                border-bottom: 1px solid transparent;
+                    border-color: $pandaFox;
+                }
+        }
+        > h2, h3, h4, h5, h6 {
+            color: $pandaBlue;
+            font-size: 20px;
+            margin: 15px 0;
+        }
+        > blockquote {
+            background-color: $pandaGrey;
+            border-left: 5px solid $pandaOrange;
+            color: $pandaBlack;
+            padding: 10px 15px;
+        }
+        > p {
+            margin-bottom: 18px;
+            > code.highlighter-rouge {
+                background-color: #F8F8F8;
+                font-size: 12px;
+                padding: 5px;
+            }
+        }
+        > ul {
+            > li {
+                margin: 5px 0;
+                &:before {
+                    content: '•';
+                    margin: 0 10px;
+                }
+                > a {
+                    display: inline-block;
+                }
+            }
+        }
+        > ul {
+            > li {
+                > ul {
+                    > li {
+                        margin: 0px 20px;
+                        &:before {
+                            content: '-';
+                            margin: 0 10px;
+                        }
+                        > a {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+        > ul {
+            > li {
+                > ul {
+                    > li {
+                        > ul {
+                            > li {
+                                margin: 0px 30px;
+                                &:before {
+                                    content: '-';
+                                    margin: 0 10px;
+                                }
+                                > a {
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        > p {
+            > strong {
+                > code {
+                    color: $pandaOrange;
+                    font-weight: 500;
+                }
+            }
+        }
+        > p {
+            > code {
+                color: $pandaLemonade;
+            }
+        }
+        > .highlight {
+            background-color: $pandaBlockBg !important;
+            border: 1px solid $metaData;
+            border-radius: 5px;
+            font-size: 14px;
+            line-height: 16px;
+            overflow-y: auto;
+            > table {
+                padding: 5px 7px;
+                .line {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    &__link {
+        color: $pandaGreen;
+        border-bottom: 1px solid transparent;
+        float: right;
+        &:hover {
+            border-color: $pandaFox;
+        }
+    }
+}
+.pagination {
+    overflow: hidden;
+    &__link {
+        background-color: $pandaFox;
+        border-bottom: 3px solid #60393E;
+        border-radius: 5px;
+        color: #fff;
+        margin: 4px 0;
+        padding: 2px 6px;
+        text-align: center;
+        text-shadow: 0px -1px #BF360C;
+        width: 70px;
+        &:active {
+            border-bottom: 1px solid #90193E;
+            margin-top: 4px;
+            text-shadow: none;
+            transform: translateY(2px);
+        }
+    }
+    &__prev {
+        float: right;
+    }
+    &__next {
+        float: left;
+    }
+}
+.comments {
+    border-bottom: 1px solid $metaData;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}

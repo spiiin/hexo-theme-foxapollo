@@ -1,0 +1,44 @@
+.archive {
+    &__title {
+        margin-left: 10px;
+    }
+    &__list {
+        font-size: 16px;
+        padding-left: 20px;
+        &__item {
+            @include flex-box(flex-start);
+            margin: 20px 0;
+            &__link {
+                border-bottom: 2px solid transparent;
+                color: $pandaBlue;
+                margin-left: 20px;
+                &:hover {
+                    border-color: $pandaFox;
+                }
+            }
+        }
+    }
+    .tag-link {
+        color: $pandaGreen;
+        margin-left: 3px;
+        border-bottom: 1px solid transparent;
+        .tag-count:before {
+            content:"[";
+        }
+        .tag-count:after {
+            content:"]";
+        }
+        &:hover {
+            color: $pandaGreen;
+            border-color: $pandaFox;
+        }
+    }
+    @media screen and (min-width: 700px) {
+        &__title {
+            margin-left: 20px;
+        }
+        &__list {
+            padding-left: 40px;
+        }
+    }
+}
