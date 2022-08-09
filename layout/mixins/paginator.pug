@@ -4,10 +4,10 @@ mixin forList()
     .pagination
         if page.prev
             a.pagination__link.pagination__prev(href=url_for(prev))
-                != __('Next')
+                != __('Позже')
         if page.next
             a.pagination__link.pagination__next(href=url_for(next))
-                != __('Back')
+                != __('Раньше')
 
 mixin forPost()
     - var prev = page.prev ? page.prev.path : false;
@@ -15,7 +15,7 @@ mixin forPost()
     .pagination
         if prev
             a.pagination__link.pagination__prev(href=url_for(prev))
-                != __('Next')
+                != __('Позже')
         if next
             a.pagination__link.pagination__next(href=url_for(next))
-                != __('Back')
+                != __('Раньше')
