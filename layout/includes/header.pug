@@ -5,7 +5,7 @@ header.main-header
             != config.title
     nav.main-header__nav
         ul.main-nav
-            each value, key in theme.menu
+            each value, key in config.menu || {}
                 li.main-nav__list
                     - var re = /^(http|https):\/\/*/gi;
                     - var tar = re.test(value) ? "_blank" : "_self"
